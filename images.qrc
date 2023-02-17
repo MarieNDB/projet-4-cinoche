@@ -2,7 +2,4 @@
   <qresource prefix="newPrefix">
     <file>ob_b9a637_ob-8ea8b1-cinema-neon-5.jpg</file>
   </qresource>
-  <qresource>
-    <file>image_attente_neon.jpg</file>
-  </qresource>
 </RCC>
