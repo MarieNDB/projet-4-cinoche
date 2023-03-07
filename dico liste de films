@@ -1,0 +1,20 @@
+dico_cine ={1:{"titre": "Les gardiens de la galaxie 3", "synopsis": "Les Gardiens de la Galaxie vont devoir combattre à nouveau Ayesha, la prêtresse des Souverains, faire face au créateur de Rocket qui veut le récupérer à tout prix et défier Adam Warlock prêt à tout pour les tuer.",
+               "genre": "titre de super  héros - Aventure - Action - Science-fiction",
+               "duree": "2h43",
+               "acteurs": "Chris Pratt - Zoe Saldana - Will Poulter - Sean Gunn",},
+           {2:{"titre": "Ant man et la guepe", "synopsis": "Les super-héros et partenaires Scott Lang et Hope Van Dyne, alias Ant-Man et la Guêpe, vont vivre de nouvelles aventures. En compagnie de Hank Pym et Janet Van Dyne, les parents de Hope, le duo va explorer la dimension subatomique, interagir avec d'étranges nouvelles créatures et se lancer dans une odyssée qui les poussera au-delà des limites de ce qu'il pensait être possible.
+               ","genre": "titre de super héros - Aventure - Action - Science-fiction",
+               "duree": "2h05",
+               "acteurs": "Kathryn Newton - Jonathan Majors - Tony McCarthy - Paul Rudd",}, !!!!!!! = 2D ???
+           {3:{"titre": "Creed III", "synopsis": "Dominant toujours le monde de la boxe, Adonis Creed prospère dans sa carrière et sa vie de famille. Lorsque Damian, ami d'enfance et ancien prodige de la boxe, refait surface après avoir purgé une peine de prison, il a hâte de prouver qu'il mérite sa chance dans l'enceinte. La confrontation entre anciens amis est plus qu'un simple combat. Pour régler le compte, Adonis doit mettre son avenir en jeu pour combattre Damian, un combattant qui n'a rien à perdre.",
+               "genre": "Action  - titre de sport - Drame",
+               "duree": "1h56",
+               "acteurs": "Michael B. Jordan - Jonathan Majors - Tessa Thompson",},
+           {4:{"titre": "Retour a seoul", "synopsis": "Sur un coup de tête, Freddie, 25 ans, retourne pour la première fois en Corée du Sud, où elle est née. La jeune femme se lance avec fougue à la recherche de ses origines dans ce pays qui lui est étranger, faisant basculer sa vie dans des directions nouvelles et inattendues.",
+               "genre": "Drame",
+               "duree": "1h58",
+               "acteurs": "Park Ji- Min - Kim Sun-Young - Kwang-Rok Oh",},
+           {5:{"titre": "elementaire", "synopsis": "Le titre suit les péripéties d'un couple improbable, Ember et Wade, dans une ville où les habitants - feu, eau, terre et air - vivent ensemble. Cette jeune femme enthousiaste et ce jeune homme discret sont sur le point de découvrir quelque chose d'élémentaire : ce qu'ils ont en commun",
+               "genre": "animation",
+               "duree": "1h50",
+               "acteurs": "Mamoudou athie - Leath Lewis",}}
