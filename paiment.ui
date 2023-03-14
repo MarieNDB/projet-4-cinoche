@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>518</width>
-    <height>490</height>
+    <width>604</width>
+    <height>487</height>
    </rect>
   </property>
   <property name="baseSize">
@@ -62,6 +62,12 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>110</height>
+        </size>
        </property>
        <property name="text">
         <string>TextLabel</string>
