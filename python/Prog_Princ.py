@@ -1,4 +1,4 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore ,QtGui ,QtWidgets
 from Ercan_Principal import Ui_EcranPrincipal
 from Fiche_Film import Ui_Fiche_Film
 
