@@ -31,6 +31,15 @@ def Appli_cine():
     accueil.PB_Film1.clicked.connect(Film1_click)
 
 
+    def ReturnButton_click():
+        Fiche_film.hide()
+
+        
+        EcranPrincipal.show()
+
+    ui.ReturnButton.clicked.connect(ReturnButton_click)
+
+
     
     EcranPrincipal.show()
     sys.exit(app.exec_())
