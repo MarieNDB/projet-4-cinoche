@@ -182,9 +182,7 @@ class Ui_Fiche_Film(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    
-
-    Fiche_Film = QtWidgets.QMainWindow()
+    Fiche_Film = QtWidgets.QWidget ()
     ui = Ui_Fiche_Film()
     ui.setupUi(Fiche_Film)
     Fiche_Film.show()
