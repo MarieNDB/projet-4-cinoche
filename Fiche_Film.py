@@ -149,7 +149,7 @@ class Ui_Fiche_Film(object):
         self.PB_Seance1_4 = QtWidgets.QPushButton(self.centralwidget)
         self.PB_Seance1_4.setGeometry(QtCore.QRect(370, 430, 111, 61))
         self.PB_Seance1_4.setObjectName("PB_Seance1_4")
-        self.ReturnButton = QtWidgets.QCommandLinkButton(self.centralwidget)
+    # self.ReturnButton = QtWidgets.QCommandLinkButton(self.centralwidget)
         self.ReturnButton.setGeometry(QtCore.QRect(520, 0, 101, 41))
         self.ReturnButton.setObjectName("ReturnButton")
         self.ReturnButton.setStyleSheet("color: white")
