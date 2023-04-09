@@ -79,7 +79,7 @@ class Ui_nombre_place(object):
         self.Pb_moins_6ans = QtWidgets.QPushButton(nombre_place)
         self.Pb_moins_6ans.setObjectName("Pb_moins_6ans")
         self.Pb_moins_6ans.setStyleSheet("color: white")
-        #self.Pb_moins_6ans.setFont(font)
+        self.Pb_moins_6ans.setFont(font)
         
         self.gridLayout.addWidget(self.Pb_moins_6ans, 1, 1, 1, 1)
         self.Pb_moins_adulte = QtWidgets.QPushButton(nombre_place)
@@ -150,9 +150,9 @@ class Ui_nombre_place(object):
 
     def retranslateUi(self, nombre_place):
         _translate = QtCore.QCoreApplication.translate
-        nombre_place.setWindowTitle(_translate("nombre_place", "Dialog"))
+        nombre_place.setWindowTitle(_translate("nombre_place", "Tarif"))
         self.Clb_place_retour.setText(_translate("nombre_place", "Retour"))
-        self.Tl_tarif.setText(_translate("nombre_place", "Veuillez choisir vos places"))
+        self.Tl_tarif.setText(_translate("nombre_place", "Veuillez choisir vos tarifs"))
         self.Tl_nb_places_6ans.setText(_translate("nombre_place", "TextLabel"))
         self.Tl_nb_place_adulte.setText(_translate("nombre_place", "TextLabel"))
         self.Pb_moins_6ans_2.setText(_translate("nombre_place", "+"))
