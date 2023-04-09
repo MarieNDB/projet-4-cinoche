@@ -79,7 +79,7 @@ class Ui_nombre_place(object):
         self.Pb_moins_6ans = QtWidgets.QPushButton(nombre_place)
         self.Pb_moins_6ans.setObjectName("Pb_moins_6ans")
         self.Pb_moins_6ans.setStyleSheet("color: white")
-        self.Pb_moins_6ans.setFont(font)
+        #self.Pb_moins_6ans.setFont(font)
         
         self.gridLayout.addWidget(self.Pb_moins_6ans, 1, 1, 1, 1)
         self.Pb_moins_adulte = QtWidgets.QPushButton(nombre_place)

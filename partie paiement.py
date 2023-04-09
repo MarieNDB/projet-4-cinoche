@@ -21,32 +21,37 @@ def appli(tarif3,tarif1,tarif2):
     ChoixSiege = QtWidgets.QMainWindow()
     siege = Ui_ChoixSiege()
     siege.setupUi(ChoixSiege)
-    place_6ans=0
-    a=1
+    #place_6ans=
+    
+        
+        #nombre_place.hide()
+    
+    
     #initialisation des tarif si on veut changer de sujet
     place.Tl_tarif_moins_26ans.setText("moins de 26 ans: "+tarif3)
     place.Tl_prix_adulte.setText("Adulte:"+tarif1)
     place.Tl_tarif_moins_6ans.setText("Moins de 6 ans: "+ tarif2)
-    place.Tl_nb_places_6ans.setText(str(place_6ans))
+    place.Tl_nb_places_6ans.setText("0")
 
     
-
+    
+    a=1
     def place_retour():
         nombre_place.hide()
         ChoixSiege.show()
-        
-    def place_suivant(place_6ans):
-        place_6ans=int(place_6ans)+2
+    def place_suivant():
+        place_6ans=int(place.Tl_nb_places_6ans.text())+1
         place.Tl_nb_places_6ans.setText(str(place_6ans))
-        print (place_6ans)
-        #nombre_placehide()
+       
+        
+    
         #paiement.show()
-        return int(place_6ans)
+        
 
     
 
     place.Clb_place_retour.clicked.connect(place_retour)
-    place.Clb_place_suivant.clicked.connect(place_suivant)
+    place.Pb_moins_6ans_2.clicked.connect(place_suivant)
    # placde.
     
     nombre_place.show()
@@ -55,4 +60,4 @@ def appli(tarif3,tarif1,tarif2):
 
     
 
-appli(tarif3,tarif1,tarif2)
+appli(tarif3,tarif1,tarif2,)
