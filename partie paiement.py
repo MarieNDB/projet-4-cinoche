@@ -3,14 +3,16 @@ from PyQt5 import QtWidgets
 from nombre_place_new import Ui_nombre_place
 from Choix_Siege import Ui_ChoixSiege
 from paiement import Ui_paiement
+from remerciement import Ui_remerciment
 
-tarif1=10
-tarif2="gratuit"
-tarif3=5
+
 #enlever quand rattaché 
 siege_selectionne=5
 
-def appli(tarif3,tarif1,tarif2,siege_selectionne):
+def appli(siege_selectionne):
+    tarif1=10
+    tarif2="gratuit"
+    tarif3=5
     import sys
     app = QtWidgets.QApplication(sys.argv)
     #Construction de la page nombre_place
@@ -27,6 +29,11 @@ def appli(tarif3,tarif1,tarif2,siege_selectionne):
     paiement = QtWidgets.QWidget()
     payer=  Ui_paiement()
     payer.setupUi(paiement)
+
+    #Construction fenetre remercirment
+    remerciement = QtWidgets.QMainWindow()
+    merci = Ui_remerciment()
+    merci.setupUi(remerciement)
     
     
     #initialisation des tarif si on veut changer de sujet
@@ -146,18 +153,20 @@ def appli(tarif3,tarif1,tarif2,siege_selectionne):
         paiement.hide()
         nombre_place.show()
     def payer_suivant():
-        if len(list(payer.le_codesecret.text()))==16 and len(list(payer.le_code_carte.text()))==3 and payer.le_codesecret.inputMask()==9999:
+        if len(list(payer.le_codesecret.text()))==16 and len(list(payer.le_code_carte.text()))==3:
             paiement.hide()
-            nombre_place.show()
+            remerciement.show()
             
 
-    #bouton de fenetre paiement
+    #bouton de fenetre paiement and payer.le_codesecret.inputMask()==9999
     payer.clb_retour.clicked.connect(payer_retour)
     payer.le_code_carte.setEchoMode(2)
     
     payer.clb_suivant.clicked.connect(payer_suivant)
-    
+
+    #enlever au raccord
     nombre_place.show()
+    
     sys.exit(app.exec_())
     
-appli(tarif3,tarif1,tarif2,siege_selectionne)
+appli(siege_selectionne)

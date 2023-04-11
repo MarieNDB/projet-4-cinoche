@@ -18,11 +18,11 @@ class Ui_paiement(object):
         
         font_titre= QtGui.QFont()
         font_titre.setFamily("Arial Black")
-        font_titre.setPointSize(10)
+        font_titre.setPointSize(15)
 
         font= QtGui.QFont()
         font.setFamily("Arial Black")
-        font.setPointSize(7)
+        font.setPointSize(10)
         
         paiement.setBaseSize(QtCore.QSize(0, 100))
         paiement.setStyleSheet("background-color: rgb(0, 0, 0);")
