@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_paiement(object):
     def setupUi(self, paiement):
         paiement.setObjectName("paiement")
-        paiement.resize(604, 487)
+        paiement.resize(904, 487)
         
         font_titre= QtGui.QFont()
         font_titre.setFamily("Arial Black")

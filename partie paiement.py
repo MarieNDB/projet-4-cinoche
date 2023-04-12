@@ -1,4 +1,5 @@
 from PyQt5 import QtWidgets
+import random
 
 from nombre_place_new import Ui_nombre_place
 from Choix_Siege import Ui_ChoixSiege
@@ -54,68 +55,47 @@ def appli(siege_selectionne):
         ChoixSiege.show()
     # action bouton pour ajouter des places moins de 6 ans
     def ajout_place_6ans():
-        if int(place.Tl_nb_place_adulte.text())+int(place.Tl_nb_places_6ans.text())+int(place.Tl_nb_place_26ans.text())==siege_selectionne:
-            place.Pb_moins_6ans_2.setEnabled(False)
-        else:
+        if int(place.Tl_nb_place_adulte.text())+int(place.Tl_nb_places_6ans.text())+int(place.Tl_nb_place_26ans.text())!=siege_selectionne:
             place_6ans=int(place.Tl_nb_places_6ans.text())+1
             place.Tl_nb_places_6ans.setText(str(place_6ans))
-            place.Pb_moins_6ans_2.setEnabled(True)
-            place.Pb_moins_6ans.setEnabled(True)
             place.Tl_lunette.setText("Vous devez encore selectionnez: "+ str(siege_selectionne-int(place.Tl_nb_place_adulte.text())-int(place.Tl_nb_places_6ans.text())-int(place.Tl_nb_place_26ans.text()))+"place(s)\n Offre spéciale!!! Les lunettes 3D sont offertes")
+     
+            
     #action bouton pour retirer des places moins de 6 ans
     def retirer_place_6ans():
-        if int(place.Tl_nb_places_6ans.text())==0:
-            place.Pb_moins_6ans.setEnabled(False)
-        else:
+        if int(place.Tl_nb_places_6ans.text())!=0:
             place_6ans=int(place.Tl_nb_places_6ans.text())-1
             place.Tl_nb_places_6ans.setText(str(place_6ans))
-            place.Pb_moins_6ans.setEnabled(True)
-            place.Pb_moins_6ans_2.setEnabled(True)
             place.Tl_lunette.setText("Vous devez encore selectionnez: "+ str(siege_selectionne-int(place.Tl_nb_place_adulte.text())-int(place.Tl_nb_places_6ans.text())-int(place.Tl_nb_place_26ans.text()))+"place(s)\n Offre spéciale!!! Les lunettes 3D sont offertes")
-    #action bouton pour ajouter des places moins de 26 ans
+ 
     def ajout_place_26ans():
-        if int(place.Tl_nb_place_adulte.text())+int(place.Tl_nb_places_6ans.text())+int(place.Tl_nb_place_26ans.text())==siege_selectionne:
-            place.Pb_plus_26ans.setEnabled(False)
-        else:
+        if int(place.Tl_nb_place_adulte.text())+int(place.Tl_nb_places_6ans.text())+int(place.Tl_nb_place_26ans.text())!=siege_selectionne:
             place_26ans=int(place.Tl_nb_place_26ans.text())+1
             place.Tl_nb_place_26ans.setText(str(place_26ans))
-            place.Pb_plus_26ans.setEnabled(True)
-            place.Pb_moins_26ans.setEnabled(True)
             place.Tl_lunette.setText("Vous devez encore selectionnez: "+ str(siege_selectionne-int(place.Tl_nb_place_adulte.text())-int(place.Tl_nb_places_6ans.text())-int(place.Tl_nb_place_26ans.text()))+"place(s)\n Offre spéciale!!! Les lunettes 3D sont offertes")
-    #action bouton pour retirer des places moins de 6 ans
+    
+                #action bouton pour retirer des places moins de 26 ans
     def retirer_place_26ans():
-        if int(place.Tl_nb_place_26ans.text())==0:
-            place.Pb_moins_26ans.setEnabled(False)
-        else:
+        if int(place.Tl_nb_place_26ans.text())!=0:
             place_26ans=int(place.Tl_nb_place_26ans.text())-1
             place.Tl_nb_place_26ans.setText(str(place_26ans))
-            place.Pb_moins_26ans.setEnabled(True)
-            place.Pb_plus_26ans.setEnabled(True)
             place.Tl_lunette.setText("Vous devez encore selectionnez: "+ str(siege_selectionne-int(place.Tl_nb_place_adulte.text())-int(place.Tl_nb_places_6ans.text())-int(place.Tl_nb_place_26ans.text()))+"place(s)\n Offre spéciale!!! Les lunettes 3D sont offertes")
-        
+                 
     #action bouton pour ajouter des places adultes
     def ajout_place_adulte():
-        if int(place.Tl_nb_place_adulte.text())+int(place.Tl_nb_places_6ans.text())+int(place.Tl_nb_place_26ans.text())==siege_selectionne:
-            place.Pb_plus_adulte.setEnabled(False)
-        else:
+        if int(place.Tl_nb_place_adulte.text())+int(place.Tl_nb_places_6ans.text())+int(place.Tl_nb_place_26ans.text())!=siege_selectionne:
             place_adulte=int(place.Tl_nb_place_adulte.text())+1
             place.Tl_nb_place_adulte.setText(str(place_adulte))
-            place.Pb_plus_adulte.setEnabled(True)
-            place.Pb_moins_adulte.setEnabled(True)
             place.Tl_lunette.setText("Vous devez encore selectionnez: "+ str(siege_selectionne-int(place.Tl_nb_place_adulte.text())-int(place.Tl_nb_places_6ans.text())-int(place.Tl_nb_place_26ans.text()))+"place(s)\n Offre spéciale!!! Les lunettes 3D sont offertes")
-    #action bouton pour retirer des places adultes
-    
+
+            #action bouton pour retirer des places adultes
     def retirer_place_adulte():
         
-        if int(place.Tl_nb_place_adulte.text())==0:
-            place.Pb_moins_adulte.setEnabled(False)
-        else:
+        if int(place.Tl_nb_place_adulte.text())!=0:
             place_adulte=int(place.Tl_nb_place_adulte.text())-1
             place.Tl_nb_place_adulte.setText(str(place_adulte))
-            place.Pb_moins_adulte.setEnabled(True)
-            place.Pb_plus_adulte.setEnabled(True)
             place.Tl_lunette.setText("Vous devez encore selectionnez: "+ str(siege_selectionne-int(place.Tl_nb_place_adulte.text())-int(place.Tl_nb_places_6ans.text())-int(place.Tl_nb_place_26ans.text()))+"place(s)\n Offre spéciale!!! Les lunettes 3D sont offertes")
-            return 
+              
     #action bouton page suivante
     def place_suivant():
         if int(place.Tl_nb_place_adulte.text())+int(place.Tl_nb_places_6ans.text())+int(place.Tl_nb_place_26ans.text())==siege_selectionne:
@@ -125,9 +105,9 @@ def appli(siege_selectionne):
             nombre_place.hide()
             paiement.show()
             payer.tl_code_carte.setText("Récapitulatif \n"
-                                        +str(place.Tl_nb_places_6ans.text())+" place(s) moins de 6 ans soit "+str(tarif2)+"\n"
-                                        +str(place.Tl_nb_place_26ans.text())+" place(s) moins de 26 ans soit " +str(tarif3*int(place.Tl_nb_place_26ans.text()))+ " € \n"
-                                        + str(place.Tl_nb_place_adulte.text())+ "place(s) adulte"+str(tarif1*int(place.Tl_nb_place_adulte.text()))+" € \n"
+                                        +str(place.Tl_nb_places_6ans.text())+" place(s) moins de 6 ans   "+str(tarif2)+"\n"
+                                        +str(place.Tl_nb_place_26ans.text())+" place(s) moins de 26 ans   " +str(tarif3*int(place.Tl_nb_place_26ans.text()))+ " € \n"
+                                        + str(place.Tl_nb_place_adulte.text())+ "place(s) adulte   "+str(tarif1*int(place.Tl_nb_place_adulte.text()))+" € \n"
                                         +"       Total= "+ str(int(place.Tl_nb_place_adulte.text())*tarif1+int(place.Tl_nb_place_26ans.text())*tarif3)+" €")
                                                                                                                    
                                         
@@ -147,13 +127,12 @@ def appli(siege_selectionne):
     
     
         
-    #payer.tl_code_carte.setText()
                                 
     def payer_retour():
         paiement.hide()
         nombre_place.show()
     def payer_suivant():
-        if len(list(payer.le_codesecret.text()))==16 and len(list(payer.le_code_carte.text()))==3:
+        if len(list(payer.le_codesecret.text()))==16 and len(list(payer.le_code_carte.text()))==3  :
             paiement.hide()
             remerciement.show()
             
@@ -161,8 +140,11 @@ def appli(siege_selectionne):
     #bouton de fenetre paiement and payer.le_codesecret.inputMask()==9999
     payer.clb_retour.clicked.connect(payer_retour)
     payer.le_code_carte.setEchoMode(2)
-    
+    payer.le_codesecret.setInputMask("9999999999999999")
     payer.clb_suivant.clicked.connect(payer_suivant)
+
+#fenetre remerciement
+    merci.Tl_num_reservation.setText("commande numéro "+ str(random.choice(range(0, 100000001))))
 
     #enlever au raccord
     nombre_place.show()
